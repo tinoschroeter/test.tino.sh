@@ -6,7 +6,7 @@ const app = express();
 app.use(morgan('combined'))
 
 app.get("/", (req, res) => {
-  res.send("Hallo");
+  res.send("Hallo test");
 });
 
 const port = process.env.PORT || 3000;
