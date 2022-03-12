@@ -1,0 +1,10 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+  - image: registry.tino.sh/test-backend
+    context: ../../
+    docker:
+      target: backend
+deploy:
+  kustomize: {}

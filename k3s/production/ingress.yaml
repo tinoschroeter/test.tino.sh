@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  name: test-ingress-backend
+  namespace: test
+spec:
+  rules:
+  - host: test.tino.sh
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: test-backend-service
+            port: 
+              number: 8080
+  tls:
+  - hosts:
+    - test.tino.sh
+    secretName: test-tino-sh-tls

@@ -1,0 +1,7 @@
+apiVersion: v1                                          
+kind: ConfigMap
+metadata:
+  name: config
+  namespace: test
+data:
+  PORT_BACK: "3000"
