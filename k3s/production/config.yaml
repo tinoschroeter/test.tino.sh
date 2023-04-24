@@ -4,4 +4,6 @@ metadata:
   name: config
   namespace: test
 data:
-  PORT_BACK: "3000"
+  CMD_DOMAIN: "test.tino.sh"
+  CMD_PROTOCOL_USESSL: "true"
+  CMD_HSTS_ENABLE: "false"

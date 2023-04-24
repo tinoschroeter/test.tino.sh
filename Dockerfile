@@ -1,4 +1,4 @@
-FROM node:16.2.0-stretch AS backend
+FROM node:18.16.0-buster-slim AS backend
 
 COPY backend .
 run npm install
